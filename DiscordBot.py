@@ -19,7 +19,7 @@ class DiscordBot(commands.Bot):
         self.timezone = pytz.timezone("Canada/Atlantic")
         self.events = []
 
-    # override on_ready to initialize the tasks
+    # override on_ready from subclass to initialize the tasks
     async def on_ready(self):
         logging.info(f"Logged in as {self.user.name}")
         self.load_events.start()
