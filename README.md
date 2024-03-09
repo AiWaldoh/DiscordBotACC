@@ -11,12 +11,12 @@ This is a Discord bot that sends notifications for upcoming events in a specifie
 
 Before deploying the bot, you need to set up your application in the Discord Developer Portal:
 
-    Go to the Discord Developer Portal and create a new application. Name it "Events Notifier".
-    Create a description for the Discord bot's profile and save the changes.
-    In the Bot tab, click on "Reset Token" to generate a new bot token. Copy the token and add it to the .env file (instructions below).
-    Remove the public bot permissions and save the changes.
-    In the OAuth2 tab, select "bot" under "Scopes". Then, under Bot Permissions, select "Send Messages", "Read Messages/View Channels" under Text Permissions, and "Manage Events" under General Permissions.
-    Copy the generated URL and open it in your browser. Select the server where you want the bot to join.
+1. Go to the Discord Developer Portal and create a new application. Name it "Events Notifier".
+2. Create a description for the Discord bot's profile and save the changes.
+3. In the Bot tab, click on "Reset Token" to generate a new bot token. Copy the token and add it to the .env file (instructions below).
+4. Remove the public bot permissions and save the changes.
+5. In the OAuth2 tab, select "bot" under "Scopes". Then, under Bot Permissions, select "Send Messages", "Read Messages/View Channels" under Text Permissions, and "Manage Events" under General Permissions.
+6. Copy the generated URL and open it in your browser. Select the server where you want the bot to join.
 
 
 ## Installation
