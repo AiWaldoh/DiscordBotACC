@@ -1,7 +1,6 @@
 # Discord Event Notification Bot
 
-This is a Discord bot that sends notifications for upcoming events in a specified guild. It is built using the discord.py library and utilizes Python's Poetry dependency management. It checks for new events every 30 minutes and sends a notification 
-Railway.app costs 5$ a month and can automatically deploys the bot from github.
+This is a Discord bot that sends notifications for upcoming events in a specified guild. It is built using the discord.py library and utilizes Python's Poetry dependency management. It checks for new events every 30 minutes and sends a notification. Railway.app costs 5$ a month and can automatically deploys the bot from github.
 
 ## Prerequisites
 
@@ -23,22 +22,24 @@ Before deploying the bot, you need to set up your application in the Discord Dev
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/AiWaldoh/DiscordBotACC.git
+   ```git clone https://github.com/AiWaldoh/DiscordBotACC.git```
 
 2. Change into the project directory:
-   cd DiscordBotACC
+   ```cd DiscordBotACC```
 
 3. Install poetry
-   sudo apt install python3-poetry
+   ```sudo apt install python3-poetry```
 
 4. Install the dependencies using Poetry:
-   poetry install
+   ```poetry install```
 
 5. Rename `.env.example` to `.env` in the project root and add the following variables:
+   ```
    DISCORD_BOT_TOKEN=your_bot_token
    NOTIFICATION_CHANNEL_ID=your_notification_channel_id
    NOTIFICATION_GUILD_ID=your_notification_guild_id
    NOTIFICATION_HOURS=1,24
+   ```
 
    Replace `your_bot_token` with your actual Discord bot token, `your_notification_channel_id` with the ID of the channel where you want the event notifications to be sent, `your_notification_guild_id` with the ID of the guild from which to fetch the scheduled events, and `NOTIFICATION_HOURS` with a comma-separated list of hours before the event start time when notifications should be sent.
 
