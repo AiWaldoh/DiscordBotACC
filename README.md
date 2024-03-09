@@ -33,7 +33,7 @@ Before deploying the bot, you need to set up your application in the Discord Dev
 4. Install the dependencies using Poetry:
    ```poetry install```
 
-5. Rename `.env.example` to `.env` in the project root and add the following variables:
+5. Rename `.env.example` to `.env` in the project root and add the values for the following static variables:
    ```
    DISCORD_BOT_TOKEN=your_bot_token
    NOTIFICATION_CHANNEL_ID=your_notification_channel_id
