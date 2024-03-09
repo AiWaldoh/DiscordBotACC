@@ -19,13 +19,13 @@ class DiscordBot(commands.Bot):
         self.timezone = pytz.timezone("Canada/Atlantic")
         self.events = []
 
-    # override on_ready from subclass to initialize the tasks
+    # override on_ready from subclass (commands.Bot) to initialize app
     async def on_ready(self):
         logging.info(f"Logged in as {self.user.name}")
         self.load_events.start()
         self.check_event_times.start()
 
-    # check for new events every 30 minutes
+    # check for newly created events every 30 minutes from discord server
     @tasks.loop(minutes=30)
     async def load_events(self):
         guild = self.get_guild(NOTIFICATION_GUILD_ID)
@@ -38,7 +38,7 @@ class DiscordBot(commands.Bot):
             except Exception as e:
                 logging.error(f"Error loading events: {str(e)}")
 
-    # check if the event is starting in the next 1 minute
+    # every minute, check if there's an upcoming event
     @tasks.loop(minutes=1)
     async def check_event_times(self):
         channel = self.get_channel(NOTIFICATION_CHANNEL_ID)
@@ -61,7 +61,7 @@ class DiscordBot(commands.Bot):
                         await channel.send(embed=embed)
                         logging.info(f"Sent notification for event: {event.name}")
 
-    # create an embed for the event
+    # create and format a message for the event
     @staticmethod
     def create_event_message(event, footer_message):
         if not isinstance(event, discord.ScheduledEvent):

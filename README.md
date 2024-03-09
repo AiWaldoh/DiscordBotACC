@@ -1,6 +1,7 @@
 # Discord Event Notification Bot
 
-This is a Discord bot that sends notifications for upcoming events in a specified guild. It is built using the discord.py library and utilizes Python's Poetry dependency management.
+This is a Discord bot that sends notifications for upcoming events in a specified guild. It is built using the discord.py library and utilizes Python's Poetry dependency management. 
+Railway.app costs 5$ a month and can automatically deploys the bot from github.
 
 ## Prerequisites
 
