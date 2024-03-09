@@ -17,7 +17,7 @@ Before deploying the bot, you need to set up your application in the Discord Dev
 4. Remove the public bot permissions and save the changes.
 5. In the OAuth2 tab, select "bot" under "Scopes". Then, under Bot Permissions, select "Send Messages", "Read Messages/View Channels" under Text Permissions, and "Manage Events" under General Permissions.
 6. Copy the generated URL and open it in your browser. Select the server where you want the bot to join.
-7. You may also need to enable developer Mode in Advanced options from your personal discord account in order to copy the Guild (server) and Channel ID from the discord client.
+7. You may also need to enable developer Mode in Advanced options from your personal discord account in order to copy the Guild (server) and Channel ID from the discord client in order to fill in the `.env` file values.
 
 
 ## Installation
