@@ -46,10 +46,19 @@ Before deploying the bot, you need to set up your application in the Discord Dev
 
 ## Usage
 
-To run the bot, use the following command:
-poetry run python main.py
+1. Activate the virtual environment using Poetry:
+    ```poetry shell```
 
-The bot will start and connect to the specified Discord guild. It will load the scheduled events from the guild and send notifications to the designated channel based on the configured notification hours.
+    This command creates a new shell with the project's virtual environment activated.
+
+2. Run the bot:
+    ```python main.py```
+
+    The bot will start and connect to the specified Discord guild. It will load the scheduled events from the guild and send notifications to the designated channel based on the configured notification hours.
+
+3. To deactivate the virtual environment and exit the shell, use the following command:
+    ```exit```
+
 
 ## Configuration
 
